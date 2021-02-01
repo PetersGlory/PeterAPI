@@ -20,9 +20,12 @@
     "url": "git+https://github.com/PetersGlory/PeterAPI.git"
   },
   "author": "Peter",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/PetersGlory/PeterAPI/issues"
+  },
+  "engines": {
+    "node": "12.x"
   },
   "homepage": "https://github.com/PetersGlory/PeterAPI#readme"
 }
