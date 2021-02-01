@@ -20,10 +20,10 @@ app.get('/',  (req, res)=> {
 
 // connection configurations
 var dbConn = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: 'Glory2200',
-    database: 'myapi'
+    host: 'sql313.hyperphp.com',
+    user: 'hp_27782279',
+    password: 'Peter2200',
+    database: 'hp_27782279_peterapi'
 });
   
 // connect to database
