@@ -3,6 +3,7 @@ var app = express();
 var bodyParser = require('body-parser');
 const fs  = require('fs');
 var mysql = require('mysql');
+const ports = process.env.PORT || 2000;
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
@@ -16,14 +17,14 @@ app.get('/',  (req, res)=> {
 		res.write(data);
     return res.end();
 	});
-});
+});         
 
 // connection configurations
 var dbConn = mysql.createConnection({
-    host: 'sql313.hyperphp.com',
-    user: 'hp_27782279',
-    password: 'Peter2200',
-    database: 'hp_27782279_peterapi'
+    host: 'localhost',
+    user: 'root',
+    password: 'Glory2200',
+    database: 'myapi'
 });
   
 // connect to database
@@ -136,8 +137,7 @@ app.delete('/book',  (req, res) =>{
 
 
 // set port
-app.listen(2000,  () =>{
-    console.log('Node app is running on port 2000');
-});
+app.listen(ports, console.log(`Node app is running on port ${ports}`)
+);
  
 module.exports = app;
